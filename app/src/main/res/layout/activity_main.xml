@@ -8,9 +8,15 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/btn_toast"
+        android:id="@+id/btn_static_fragments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Mostrar mensaje"/>
+        android:text="Fragments estáticos"/>
+
+    <Button
+        android:id="@+id/btn_dynamic_fragments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragments dinámicos"/>
 
 </LinearLayout>
