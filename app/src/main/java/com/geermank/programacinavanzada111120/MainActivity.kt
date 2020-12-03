@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.geermank.programacinavanzada111120.dynamicfragments.UsersActivity
 import com.geermank.programacinavanzada111120.staticfragments.StaticFragmentsActivity
+import com.geermank.programacinavanzada111120.threads.BlockingTaskActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_dynamic_fragments.setOnClickListener {
             startActivity(Intent(this, UsersActivity::class.java))
+        }
+
+        btn_background_task.setOnClickListener {
+            startActivity(Intent(this, BlockingTaskActivity::class.java))
         }
     }
 }

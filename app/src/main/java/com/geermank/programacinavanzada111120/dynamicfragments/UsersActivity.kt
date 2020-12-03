@@ -22,4 +22,6 @@ class UsersActivity : AppCompatActivity(), UsersListFragment.OnShowUserInfoListe
             .addToBackStack(null)
             .commit()
     }
+
+    
 }

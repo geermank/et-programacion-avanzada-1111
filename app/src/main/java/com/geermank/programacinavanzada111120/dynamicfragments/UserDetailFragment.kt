@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.geermank.programacinavanzada111120.R
 import kotlinx.android.synthetic.main.fragment_user_detail.*
 
-class UserDetailFragment private constructor() : Fragment() {
+class UserDetailFragment : Fragment() {
 
     companion object {
         private const val USER_NAME_EXTRA = "USER_NAME"
