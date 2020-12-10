@@ -3,6 +3,8 @@
     package="com.geermank.programacinavanzada111120">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".threads.BlockingTaskActivity"></activity>
+        <activity android:name=".permissions.LocationActivity"></activity>
+        <activity android:name=".notifications.NotificationsActivity" />
+        <activity
+            android:name=".threads.BlockingTaskActivity"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".dynamicfragments.UsersActivity" />
         <activity android:name=".staticfragments.StaticFragmentsActivity" />
         <activity android:name=".MainActivity">

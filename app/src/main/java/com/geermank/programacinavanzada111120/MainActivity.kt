@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.geermank.programacinavanzada111120.dynamicfragments.UsersActivity
+import com.geermank.programacinavanzada111120.notifications.NotificationsActivity
+import com.geermank.programacinavanzada111120.permissions.LocationActivity
 import com.geermank.programacinavanzada111120.staticfragments.StaticFragmentsActivity
 import com.geermank.programacinavanzada111120.threads.BlockingTaskActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -23,6 +25,14 @@ class MainActivity : AppCompatActivity() {
 
         btn_background_task.setOnClickListener {
             startActivity(Intent(this, BlockingTaskActivity::class.java))
+        }
+
+        btn_notifications.setOnClickListener {
+            startActivity(Intent(this, NotificationsActivity::class.java))
+        }
+
+        btn_location.setOnClickListener {
+            startActivity(Intent(this, LocationActivity::class.java))
         }
     }
 }
