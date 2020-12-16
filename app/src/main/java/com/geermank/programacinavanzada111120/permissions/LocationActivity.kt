@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.geermank.programacinavanzada111120.R
 import com.google.android.gms.location.LocationServices
@@ -23,7 +24,13 @@ class LocationActivity : AppCompatActivity() {
         if (ActivityCompat.checkSelfPermission(this, fineLocation) == PackageManager.PERMISSION_GRANTED
             && ActivityCompat.checkSelfPermission(this, coarseLocation) == PackageManager.PERMISSION_GRANTED) {
             getLocation()
-        } else {
+        } else if(ActivityCompat.shouldShowRequestPermissionRationale(this, fineLocation)) {
+            Toast.makeText(
+                this,
+                "Ya rechazaste los permisos, por favor concedelos sino no hay funcionalidad",
+                Toast.LENGTH_SHORT
+            ).show()
+        }  else {
             ActivityCompat.requestPermissions(this, arrayOf(fineLocation, coarseLocation), LOCATION_RC)
         }
     }
@@ -44,7 +51,7 @@ class LocationActivity : AppCompatActivity() {
     private fun getLocation() {
         val locationProvider = LocationServices.getFusedLocationProviderClient(this)
         locationProvider.lastLocation.addOnSuccessListener {
-
+            Toast.makeText(this, "Latitud: ${it?.latitude}, Longitud: ${it?.longitude}", Toast.LENGTH_SHORT).show()
         }
     }
 }
