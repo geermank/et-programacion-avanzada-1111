@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.geermank.programacinavanzada111120.dynamicfragments.UsersActivity
 import com.geermank.programacinavanzada111120.notifications.NotificationsActivity
 import com.geermank.programacinavanzada111120.permissions.LocationActivity
+import com.geermank.programacinavanzada111120.services.ChronometerActivity
 import com.geermank.programacinavanzada111120.services.TimerActivity
 import com.geermank.programacinavanzada111120.staticfragments.StaticFragmentsActivity
 import com.geermank.programacinavanzada111120.threads.BlockingTaskActivity
@@ -39,6 +40,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_timer.setOnClickListener {
             startActivity(Intent(this, TimerActivity::class.java))
+        }
+
+        btn_chronometer.setOnClickListener {
+            startActivity(Intent(this, ChronometerActivity::class.java))
         }
     }
 }

@@ -1,9 +1,15 @@
 package com.geermank.programacinavanzada111120.services
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.Service
 import android.content.Intent
+import android.os.Build
 import android.os.IBinder
 import android.util.Log
+import androidx.core.app.NotificationCompat
+import com.geermank.programacinavanzada111120.R
 
 class TimerService : Service() {
 
@@ -18,6 +24,8 @@ class TimerService : Service() {
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        startForeground(1, getNotification())
+
         Thread {
             Log.i("TimerService", "Tarea iniciada")
             Thread.sleep(5000)
@@ -30,5 +38,20 @@ class TimerService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         Log.i("TimerService", "Temporizador destruido")
+    }
+
+    private fun getNotification(): Notification? {
+        val builder = NotificationCompat.Builder(this, "temporizador-id")
+            .setContentTitle("Temporizador en curso")
+            .setContentText("Tiempo de espera: 5 segundos")
+            .setSmallIcon(R.mipmap.ic_launcher)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
+            val notificationChannel = NotificationChannel("temporizador-id", "Temporizador", NotificationManager.IMPORTANCE_HIGH)
+            notificationManager.createNotificationChannel(notificationChannel)
+        }
+
+        return builder.build()
     }
 }

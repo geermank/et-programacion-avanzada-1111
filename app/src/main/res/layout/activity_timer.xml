@@ -14,4 +14,13 @@
         android:text="Iniciar temporizador"
         android:layout_centerInParent="true"/>
 
+    <Button
+        android:id="@+id/btn_stop_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detener temporizador"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/btn_start_timer"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

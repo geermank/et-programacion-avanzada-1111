@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".services.TimerActivity"/>
+        <activity android:name=".services.ChronometerActivity"></activity>
+        <activity android:name=".services.TimerActivity" />
         <activity android:name=".permissions.LocationActivity" />
         <activity android:name=".notifications.NotificationsActivity" />
         <activity
@@ -29,7 +30,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".services.TimerService"/>
+        <service android:name=".services.TimerService" />
+        <service android:name=".services.TimerIntentService" />
+        <service android:name=".services.ChronometerService"/>
     </application>
 
 </manifest>

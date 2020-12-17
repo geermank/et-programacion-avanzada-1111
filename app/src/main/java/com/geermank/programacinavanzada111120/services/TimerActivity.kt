@@ -1,6 +1,7 @@
 package com.geermank.programacinavanzada111120.services
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.geermank.programacinavanzada111120.R
@@ -14,7 +15,16 @@ class TimerActivity : AppCompatActivity() {
 
         btn_start_timer.setOnClickListener {
             val intent = Intent(this, TimerService::class.java)
-            startService(intent)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                startForegroundService(intent)
+            } else {
+                startService(intent)
+            }
+        }
+
+        btn_stop_timer.setOnClickListener {
+            val intent = Intent(this, TimerService::class.java)
+            stopService(intent)
         }
     }
 }
