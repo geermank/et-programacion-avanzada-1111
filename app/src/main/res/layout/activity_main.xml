@@ -49,4 +49,10 @@
         android:layout_height="wrap_content"
         android:text="Cronómetro"/>
 
+    <Button
+        android:id="@+id/btn_baterry_low"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batería baja"/>
+
 </LinearLayout>

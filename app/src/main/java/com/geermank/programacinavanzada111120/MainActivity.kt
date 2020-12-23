@@ -3,6 +3,7 @@ package com.geermank.programacinavanzada111120
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.geermank.programacinavanzada111120.broadcasts.BatteryLowActivity
 import com.geermank.programacinavanzada111120.dynamicfragments.UsersActivity
 import com.geermank.programacinavanzada111120.notifications.NotificationsActivity
 import com.geermank.programacinavanzada111120.permissions.LocationActivity
@@ -44,6 +45,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_chronometer.setOnClickListener {
             startActivity(Intent(this, ChronometerActivity::class.java))
+        }
+
+        btn_baterry_low.setOnClickListener {
+            startActivity(Intent(this, BatteryLowActivity::class.java))
         }
     }
 }
