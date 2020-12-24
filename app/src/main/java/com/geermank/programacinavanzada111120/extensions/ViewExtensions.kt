@@ -13,3 +13,11 @@ fun View.hide() {
 fun View.remove() {
     visibility = View.GONE
 }
+
+fun View.block() {
+    isEnabled = false
+}
+
+fun View.unblock() {
+    isEnabled = true
+}

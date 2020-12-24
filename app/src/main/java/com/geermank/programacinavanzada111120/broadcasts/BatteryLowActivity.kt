@@ -4,8 +4,6 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import com.geermank.programacinavanzada111120.BaseActivity
-import com.geermank.programacinavanzada111120.BatteryChargeLevelReceiver
-import com.geermank.programacinavanzada111120.OnChargeLevelChangedListener
 import com.geermank.programacinavanzada111120.R
 import kotlinx.android.synthetic.main.activity_battery_low.*
 

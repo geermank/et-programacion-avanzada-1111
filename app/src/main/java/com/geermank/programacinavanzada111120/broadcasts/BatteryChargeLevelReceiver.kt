@@ -1,4 +1,4 @@
-package com.geermank.programacinavanzada111120
+package com.geermank.programacinavanzada111120.broadcasts
 
 import android.content.BroadcastReceiver
 import android.content.Context
