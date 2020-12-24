@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".broadcasts.BatteryLowActivity"></activity>
+        <activity android:name=".alarms.AlarmsActivity"></activity>
+        <activity android:name=".broadcasts.BatteryLowActivity" />
         <activity android:name=".services.ChronometerActivity" />
         <activity android:name=".services.TimerActivity" />
         <activity android:name=".permissions.LocationActivity" />

@@ -3,6 +3,7 @@ package com.geermank.programacinavanzada111120
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.geermank.programacinavanzada111120.alarms.AlarmsActivity
 import com.geermank.programacinavanzada111120.broadcasts.BatteryLowActivity
 import com.geermank.programacinavanzada111120.dynamicfragments.UsersActivity
 import com.geermank.programacinavanzada111120.notifications.NotificationsActivity
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
 
         btn_baterry_low.setOnClickListener {
             startActivity(Intent(this, BatteryLowActivity::class.java))
+        }
+
+        btn_alarms.setOnClickListener {
+            startActivity(Intent(this, AlarmsActivity::class.java))
         }
     }
 }
